@@ -3,9 +3,9 @@ package com.unidays.challenge;
 public class ShopItem {
 
     private String name;
-    private int price;
+    private double price;
 
-    public ShopItem(String name, int price) {
+    public ShopItem(String name, double price) {
         this.name = name;
         this.price = price;
     }
@@ -14,7 +14,7 @@ public class ShopItem {
         return name;
     }
 
-    public int getPrice() {
+    public double getPrice() {
         return price;
     }
 
