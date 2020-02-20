@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="unidayschallenge:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/unidayschallenge_jar</output-path>
+    <root id="archive" name="unidayschallenge.jar">
+      <element id="module-output" name="unidayschallenge" />
+    </root>
+  </artifact>
+</component>
