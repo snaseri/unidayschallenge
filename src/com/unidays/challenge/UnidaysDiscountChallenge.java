@@ -2,6 +2,7 @@ package com.unidays.challenge;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.List;
 
 public class UnidaysDiscountChallenge {
 
@@ -26,10 +27,12 @@ public class UnidaysDiscountChallenge {
         if (totalPrice >= freeDeliveryPrice){
             System.out.println("This order is over 50£ and hence it is eligible for free delivery");
             System.out.println("Delivery Charge = £" + 0.00);
-            return totalPrice - discount;
+            System.out.println("Total price including delivery = £ " + totalPrice);
+            return totalPrice;
         } else {
             System.out.println("This order is under 50£ and hence not eligible for free delivery");
             System.out.println("Delivery Charge = £" + deliveryCharge);
+            System.out.println("Total price including delivery = £ " + totalPrice);
             return (totalPrice + deliveryCharge);
         }
     }
@@ -86,8 +89,14 @@ public class UnidaysDiscountChallenge {
             discountAmount = discountAmount +  ((e/3) * 5);
         }
 
-        System.out.println(discountAmount);
-
         return discountAmount;
+    }
+
+    public void clearBasket() {
+        basket.clear();
+    }
+
+    public void addMultipleToBasket(List<ShopItem> toAdd) {
+        basket.addAll(toAdd);
     }
 }
