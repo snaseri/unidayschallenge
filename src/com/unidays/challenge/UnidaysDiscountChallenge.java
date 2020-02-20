@@ -60,6 +60,7 @@ public class UnidaysDiscountChallenge {
         int d = 0;
         int e = 0;
 
+        //a Counter to see how many of each item type is held in the basket
         for (ShopItem item: basket) {
             switch(item.getDiscountType()) {
                 case "B":
@@ -80,7 +81,6 @@ public class UnidaysDiscountChallenge {
         //for example if only 1 item = b / 2 = 0
         discountAmount = discountAmount + ((b / 2) * 4);
 
-
         //3 for 10£
         if (c%3 == 1) {
             c--;
@@ -94,6 +94,7 @@ public class UnidaysDiscountChallenge {
 
         //Buy one get one free
         discountAmount = discountAmount + ((d/2) * 7);
+
         //3 for the price of 2
         if (e%3 == 1) {
             e--;
