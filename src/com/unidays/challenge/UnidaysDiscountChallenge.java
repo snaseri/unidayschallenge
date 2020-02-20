@@ -4,16 +4,29 @@ import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * UnidaysDiscountChallenge is used to hold Shop items and do calculations with it.
+ *
+ * @author  Sepehr Naseri
+ * @version 1.0
+ * @since   2019-11-19
+ */
 public class UnidaysDiscountChallenge {
 
     private ArrayList<ShopItem> basket = new ArrayList<>();
     private final double deliveryCharge = 7.00;
     private final double freeDeliveryPrice= 50.00;
 
+    /**
+     * @param ShopItem to be added.
+     */
     public void AddToBasket(ShopItem item) {
         basket.add(item);
     }
 
+    /**
+     * @return the total price (including delievery) of all ShopItems held by this object.
+     */
     public double CalculateTotalPrice() {
 
         double discount = this.getDiscount();
@@ -37,6 +50,9 @@ public class UnidaysDiscountChallenge {
         }
     }
 
+    /**
+     * @return return the amount of discount eligible for all items in basket.
+     */
     public double getDiscount() {
         double discountAmount = 0.0;
         int b = 0;
@@ -92,10 +108,17 @@ public class UnidaysDiscountChallenge {
         return discountAmount;
     }
 
+
+    /**
+     * Clears all the ShopItems held by this object
+     */
     public void clearBasket() {
         basket.clear();
     }
 
+    /**
+     * Adds more than one ShopItem at once
+     */
     public void addMultipleToBasket(List<ShopItem> toAdd) {
         basket.addAll(toAdd);
     }

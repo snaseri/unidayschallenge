@@ -8,6 +8,7 @@ public class Main {
 
     public static void main(String[] args) {
 
+        //Creating shop items to add to list
         ShopItem A = new ShopItem("A", 8.0, "A"); //No discount
         ShopItem B = new ShopItem("B", 12.0, "B"); //2 for 20£
         ShopItem C = new ShopItem("C", 4.0, "C"); //3 for 10£
