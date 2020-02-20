@@ -4,10 +4,12 @@ public class ShopItem {
 
     private String name;
     private double price;
+    private String discountType;
 
-    public ShopItem(String name, double price) {
+    public ShopItem(String name, double price, String discountType) {
         this.name = name;
         this.price = price;
+        this.discountType = discountType;
     }
 
     public String getName() {
@@ -18,11 +20,8 @@ public class ShopItem {
         return price;
     }
 
-    public void setPrice(int price) {
-        this.price = price;
+    public String getDiscountType() {
+        return discountType;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
 }

@@ -42,7 +42,7 @@ public class UnidaysDiscountChallenge {
         int e = 0;
 
         for (ShopItem item: basket) {
-            switch(item.getName()) {
+            switch(item.getDiscountType()) {
                 case "B":
                     b = b +1;
                     break;
@@ -87,7 +87,7 @@ public class UnidaysDiscountChallenge {
         }
 
         System.out.println(discountAmount);
-// 1 2
+
         return discountAmount;
     }
 }
