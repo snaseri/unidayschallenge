@@ -37,7 +37,7 @@ public class UnidaysDiscountChallenge {
         }
         totalPrice = totalPrice - discount;
 
-        if (totalPrice >= freeDeliveryPrice){
+        if (totalPrice >= freeDeliveryPrice || totalPrice <= 0){
             System.out.println("This order is over 50£ and hence it is eligible for free delivery");
             System.out.println("Delivery Charge = £" + 0.00);
             System.out.println("Total price including delivery = £ " + totalPrice);
